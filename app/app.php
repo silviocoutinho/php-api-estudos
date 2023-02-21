@@ -9,5 +9,6 @@
     function api_request($option){
         $client = curl_init(API_BASE . $option);
         curl_setopt($client, CURLOPT_RETURNTRANSFER, TRUE);
-        return $response = curl_exec($client);
+        $response = curl_exec($client);
+        return json_decode($response, true);
     }

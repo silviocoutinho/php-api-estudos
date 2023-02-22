@@ -1,7 +1,6 @@
 <?php
-    header('Content-Type: text/html; charset=utf-8');
-    define('API_BASE', 'http://php5-api.dvl.to/api/index.php?option=');
 
+    require_once 'configs.php';
     echo '<h3>APLICAÇÃO</h3><hr>';
 
     $resultado = api_request('status');

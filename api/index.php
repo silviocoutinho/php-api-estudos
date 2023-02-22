@@ -11,7 +11,21 @@
 				define_response($data, 'API running OK!!');
 				break;
 			case 'random':
-				define_response($data, rand(0, 1000));
+				$min = 0;
+				$max = 1000;
+
+				/*
+				verifica sem vem min e / ou max no GET
+				*/
+				if(isset($_GET['min'])){
+					$min = $_GET['min'];
+				}
+
+				if(isset($_GET['max'])){
+					$max = $_GET['max'];
+				}
+
+				define_response($data, rand($min, $max));
 				break;
 
 

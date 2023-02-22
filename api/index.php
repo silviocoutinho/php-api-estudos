@@ -24,6 +24,10 @@
 				if(isset($_GET['max'])){
 					$max = intval($_GET['max']);
 				}
+				if($min >= $max){
+					response($data);
+					return;
+				}
 
 				define_response($data, rand($min, $max));
 				break;

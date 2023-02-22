@@ -4,7 +4,7 @@
     echo '<h3>APLICAÇÃO</h3><hr>';
 
     for ($i=0; $i < 10; $i++) {
-        $resultado = api_request('random&min=200&max=300');
+        $resultado = api_request('random&min=333&max=300');
 
         if ($resultado['status'] == 'ERROR'){
             die('Aconteceu um erro na chamada à API');

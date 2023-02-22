@@ -18,11 +18,11 @@
 				verifica sem vem min e / ou max no GET
 				*/
 				if(isset($_GET['min'])){
-					$min = $_GET['min'];
+					$min =  intval($_GET['min']) ;
 				}
 
 				if(isset($_GET['max'])){
-					$max = $_GET['max'];
+					$max = intval($_GET['max']);
 				}
 
 				define_response($data, rand($min, $max));

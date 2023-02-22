@@ -8,8 +8,7 @@
 
 		switch ($_GET['option']) {
 			case 'status':
-				success($data);
-				$data['data'] = 'API running OK!';
+				define_response($data, 'API running OK!!');
 				break;
 
 		}
@@ -20,8 +19,9 @@
 	response($data);
 
 	//=====================================================
-	function success(&$data){
+	function define_response(&$data, $value){
 		$data['status'] = 'SUCCESS';
+		$data['data'] = $value;
 	}
 
 	//=====================================================

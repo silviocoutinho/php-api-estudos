@@ -8,7 +8,7 @@
 
 		switch ($_GET['option']) {
 			case 'status':
-				$data['status'] = 'SUCCESS';
+				success($data);
 				$data['data'] = 'API running OK!';
 				break;
 
@@ -18,6 +18,11 @@
 
 	// emitir a resposta da API
 	response($data);
+
+	//=====================================================
+	function success(&$data){
+		$data['status'] = 'SUCCESS';
+	}
 
 	//=====================================================
 	//construcao de response

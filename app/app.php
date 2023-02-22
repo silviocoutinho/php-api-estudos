@@ -1,4 +1,5 @@
 <?php
+    header('Content-Type: text/html; charset=utf-8');
     define('API_BASE', 'http://api-php5.dvl.to/api/index.php?option=');
 
     echo '<h3>APLICAÇÃO</h3><hr>';

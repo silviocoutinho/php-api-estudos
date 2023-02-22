@@ -3,18 +3,19 @@
     require_once 'configs.php';
     echo '<h3>APLICAÇÃO</h3><hr>';
 
-    $resultado = api_request('random');
+    for ($i=0; $i < 10; $i++) {
+        $resultado = api_request('random');
 
-    if ($resultado['status'] == 'ERROR'){
-        die('Aconteceu um erro na chamada à API');
+        if ($resultado['status'] == 'ERROR'){
+            die('Aconteceu um erro na chamada à API');
+        }
+
+        echo "O valor randomico: " . $resultado['data']. "<br>";
     }
-
-    echo '<pre>';
-    print_r($resultado);
-    echo '</pre>';
+    echo 'Terminado';
 
     function api_request($option){
-        echo '<h3>'.API_BASE.$option.'</h3>';
+
         $client = API_BASE . $option;
 
         $curl = curl_init();

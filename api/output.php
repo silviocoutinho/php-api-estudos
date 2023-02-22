@@ -1,4 +1,8 @@
 <?php
+
+    function api_status(&$data){
+        define_response($data, 'API OK');
+    }
     //=====================================================
 	function define_response(&$data, $value){
 		$data['status'] = 'SUCCESS';

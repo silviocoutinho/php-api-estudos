@@ -10,7 +10,7 @@ require_once 'output.php';
 
 		switch ($_GET['option']) {
 			case 'status':
-				define_response($data, 'API OK');
+				api_status(&$data);
 				break;
 			case 'random':
 				$min = 0;

@@ -5,6 +5,10 @@
 
     $resultado = api_request('status');
 
+    if ($resultado['status'] == 'ERROR'){
+        die('Aconteceu um erro na chamada à API');
+    }
+
     echo '<pre>';
     print_r($resultado);
     echo '</pre>';

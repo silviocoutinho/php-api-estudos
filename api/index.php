@@ -1,6 +1,7 @@
 <?php
 
-	$data = array();
+	$data['status'] = 'ERROR';
+	$data['data'] = 'Invalid option!';
 
 	//request
 	if(isset($_GET['option'])){
@@ -10,13 +11,9 @@
 				$data['status'] = 'SUCCESS';
 				$data['data'] = 'API running OK!';
 				break;
-			default:
-				$data['status'] = 'ERROR';
-				$data['data'] = 'Invalid option!';
+
 		}
 
-	} else {
-		$data['status'] = 'ERROR';
 	}
 
 	// emitir a resposta da API

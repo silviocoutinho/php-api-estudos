@@ -10,6 +10,10 @@
 			case 'status':
 				define_response($data, 'API running OK!!');
 				break;
+			case 'random':
+				define_response($data, rand(0, 1000));
+				break;
+
 
 		}
 

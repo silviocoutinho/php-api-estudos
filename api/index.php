@@ -1,14 +1,16 @@
 <?php
 
+require_once 'output.php';
+
 	$data['status'] = 'ERROR';
-	$data['data'] = 'Invalid option!';
+	$data['data'] = array();
 
 	//request
 	if(isset($_GET['option'])){
 
 		switch ($_GET['option']) {
 			case 'status':
-				define_response($data, 'API running OK!!');
+				define_response($data, 'API OK');
 				break;
 			case 'random':
 				$min = 0;
@@ -40,16 +42,3 @@
 	// emitir a resposta da API
 	response($data);
 
-	//=====================================================
-	function define_response(&$data, $value){
-		$data['status'] = 'SUCCESS';
-		$data['data'] = $value;
-	}
-
-	//=====================================================
-	//construcao de response
-	function response($data){
-		header("Content-Type:application/json");
-		echo json_encode($data);
-	}
-?>

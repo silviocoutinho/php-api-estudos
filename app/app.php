@@ -3,7 +3,7 @@
     require_once 'configs.php';
     echo '<h3>APLICAÇÃO</h3><hr>';
 
-    $resultado = api_request('status');
+    $resultado = api_request('random');
 
     if ($resultado['status'] == 'ERROR'){
         die('Aconteceu um erro na chamada à API');
